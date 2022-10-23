@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #1e66f53a,
+    #1e66f53a 20px,
+    #cccccc 20px,
+    #cccccc 40px
+  );
+  backdrop-filter: blur(4px);
+}
+.img1 {
+  background-image: url(./scr/img/1.jpg);
+}
+.img2 {
+  background-image: url(./scr/img/2.jpg);
+}
+.img3 {
+  background-image: url(./scr/img/3.jpg);
+}
+.img4 {
+  background-image: url(./scr/img/4.jpg);
+}
+.img5 {
+  background-image: url(./scr/img/5.jpg);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40em;
+  margin: auto auto;
+  position: relative;
+  width: 80%;
+  padding-top: 3%;
+}
+.wrapper input {
+  display: none;
+}
+ul.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: inherit;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  background-color: black;
+  margin: 0 auto;
+  list-style-type: none;
+  padding: 5%;
+}
+.slider-description li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+li.slides {
+  height: inherit;
+  width: inherit;
+  height: inherit;
+  opacity: 0;
+  position: relative;
+  width: 100%;
+  z-index: 0;
+  transform: scale(1.5);
+  animation: animate 1s ease-in-out;
+}
+
+
+.img {
+  width: inherit;
+  height: inherit;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: black;
+}
+.img-description {
+  font-size: 18px;
+  text-align: center;
+  padding-top: 8px;
+  color: white;
+  position: relative;
+  animation: animate 1s ease-in-out;
+}
+@keyframes animate {
+  from{
+    transform: scale(1.5);
+  }
+  to{
+    transform: scale(1);
+  }
+}
+.slides{
+  display: none;
+}
+
+label {
+  cursor: pointer;
+  display: inline-block;
+  height: 8px;
+  margin: 25px 1px 0 1px;
+  position: relative;
+  width: 8px;
+  border-radius: 50%;
+  transition: background ease-in-out 0.5s;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+}
+.controls label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(0, -25%);
+  width: 32px;
+  height: 32px;
+  background: none;
+}
+.little {
+  width: 17px;
+  height: 17px;
+  background-color: #5308ea8d;
+  border-radius: 50%;
+}
+.little:hover{
+  background-color: rgb(0, 126, 126);
+}
+
+
+.wrapper label:active{
+  background-color: rgb(200, 200, 200);
+}
+ul.slider-description {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+  width: inherit;
+  height: inherit;
+  margin: 0 auto;
+  list-style-type: none;
+  min-width: 30%;
+}
+li.slide-description{
+  width: auto;
+    height: auto;
+    display: none;
+}
+.description{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 3em;
+  width: 80%;
+  background: black;
+  padding: 30px;
+}
+#checkbox1:checked ~ .slider .slide1,
+#checkbox2:checked ~ .slider .slide2,
+#checkbox3:checked ~ .slider .slide3,
+#checkbox4:checked ~ .slider .slide4,
+#checkbox5:checked ~ .slider .slide5 {
+  opacity: 1;
+  z-index: 1;
+  transform: scale(1);
+  display: block;
+}
+#checkbox1:checked ~ .description .slider-description .slide1,
+#checkbox2:checked ~ .description .slider-description .slide2,
+#checkbox3:checked ~ .description .slider-description .slide3,
+#checkbox4:checked ~ .description .slider-description .slide4,
+#checkbox5:checked ~ .description .slider-description .slide5 {
+  opacity: 1;
+  z-index: 1;
+  transform: scale(1);
+  display: block;
+}
+label:nth-child(1),
+label:nth-child(2),
+label:nth-child(3),
+label:nth-child(4),
+label:nth-child(5) {
+  width: 17px;
+  height: 17px;
+  background-color: #5308ea8d;
+}
+#checkbox1:checked ~ .description .controls label:nth-child(1) > div,
+#checkbox2:checked ~ .description .controls label:nth-child(2) > div,
+#checkbox3:checked ~ .description .controls label:nth-child(3) > div,
+#checkbox4:checked ~ .description .controls label:nth-child(4) > div,
+#checkbox5:checked ~ .description .controls label:nth-child(5) > div{
+  background-color: rgb(0, 126, 126);
+}
+.wrapper label:active .little{
+  background-color: yellow;
+}
+.wrapper label:active{
+  background-color: yellow;
+}
+
+@media (max-width: 620px) {
+  .description{
+    flex-direction: column;
+    height: 11em;
+  }
+  ul.slider-description{
+    order: 1;
+  }
+}
