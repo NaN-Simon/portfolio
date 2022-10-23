@@ -1,4 +1,4 @@
-# Isaev Kirill
+# Isaev Kirill (NaN-Simon)
 
 ## Contact information:
 
