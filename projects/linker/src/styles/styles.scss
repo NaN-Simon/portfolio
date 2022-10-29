@@ -1,0 +1,57 @@
+$mainColor: #0293f3;;
+
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: $mainColor;
+  font-family: Roboto;
+  background: rgb(0,0,0);
+  max-width: 100%;
+}
+.header{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.wrapper{
+  min-width: 320px;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.linker{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  &__start-btn{
+    width: 100%;
+    min-height: 30px;
+    cursor: pointer;
+    background: $mainColor;
+    border-radius: 5px;
+    font-family: Roboto;
+    color: white;
+  }
+
+  &__areas{
+    width: 100%;
+    min-height: 30vh;
+    display: flex;
+  }
+
+  &__area{
+    width: 100%;
+    border: 8px solid $mainColor;
+    margin: 2px;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+  }
+}

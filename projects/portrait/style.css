@@ -1,0 +1,34 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-y: hidden;
+}
+body{
+  position: relative;
+}
+.plan{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(#47520226 50%, #000000 100%);
+}
+.container{
+  background: black;
+}
+.text{
+  background-image: url('img.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  -webkit-background-clip: text;
+  color: transparent;
+  line-height: 10px;
+  font-size: 10px;
+  filter: contrast(1.3) brightness(1);
+}
