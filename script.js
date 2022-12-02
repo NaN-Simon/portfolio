@@ -58,4 +58,5 @@ const block16 = new Card('Visualizer', './projects/visualizer/index.html', 'Depl
 const block17 = new Card('Sandbox-painter', './projects/sandbox-painter/index.html', 'Deploy', 'Jule 2022')
 const block18 = new Card('Linker', './projects/linker/dist/index.html', 'Deploy', 'Jule 2022')
 const block19 = new Card('portrait', './projects/portrait/index.html', 'Deploy', 'October 2022')
-const block20 = new Card('English-cards', './projects/eng-cards/dist/index.html', 'Deploy', 'November 2022')
+const block20 = new Card('file-scan', './projects/file-scan/index.js', 'Code', 'October 2022')
+const block21 = new Card('English-cards', './projects/eng-cards/dist/index.html', 'Deploy', 'November 2022')
